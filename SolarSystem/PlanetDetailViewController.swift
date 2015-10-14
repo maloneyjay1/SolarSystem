@@ -17,34 +17,21 @@ class PlanetDetailViewController: UIViewController {
     
     @IBOutlet weak var planetLODResult: UILabel!
     
+    @IBOutlet weak var planetImageUpdated: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
-    func updateWithPlanet (myPlanet: Planet) {
-        
-        planetDiameterResult.text = "\(myPlanet.diameter)"
-        planetDistanceResult.text = "\(myPlanet.millionKMsFromSun)"
-        planetLODResult.text = "\(myPlanet.dayLength)"
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        func updateWithPlanet(planet: Planet) {
+            title = planet.name
+            planetImageUpdated.image = UIImage(named: planet.imageName)
+            planetDiameterResult.text = "\(planet.diameter)"
+            planetDistanceResult.text = "\(planet.millionKMsFromSun) 10^6km"
+            planetLODResult.text = "\(planet.dayLength) hours"
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}

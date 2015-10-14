@@ -63,6 +63,7 @@
                         <outlet property="planetDetailImage" destination="cpT-hL-Iji" id="QPs-la-ySW"/>
                         <outlet property="planetDiameterResult" destination="KwV-XG-lkD" id="14A-T5-xkQ"/>
                         <outlet property="planetDistanceResult" destination="tiq-Kn-ppC" id="V5h-vt-wg4"/>
+                        <outlet property="planetImageUpdated" destination="cpT-hL-Iji" id="Tgd-su-lbB"/>
                         <outlet property="planetLODResult" destination="dVF-4J-Ydz" id="jf0-4Y-SU2"/>
                     </connections>
                 </viewController>
